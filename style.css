@@ -65,3 +65,22 @@ h1 {
 .forzar-herencia {
     border: inherit; /* Esto obliga a que el hijo tome el borde del padre */
 }
+
+/* Estilos para el contenedor Flexbox */
+.flex-container {
+    display: flex; /* Habilita el modelo de caja flexible */
+    justify-content: space-around; /* Distribuye espacio en el eje principal */
+    align-items: center; /* Alinea los elementos en el eje cruzado */
+    gap: 15px; /* Define el espacio entre elementos */
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+/* Estilos para los elementos hijos */
+.item {
+    background-color: #ca2dd8;
+    color: white;
+    padding: 20px;
+    flex-grow: 1; /* Permite que el elemento crezca según el espacio disponible */
+    text-align: center;
+}
