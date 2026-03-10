@@ -84,3 +84,19 @@ h1 {
     flex-grow: 1; /* Permite que el elemento crezca según el espacio disponible */
     text-align: center;
 }
+
+.align-container {
+    display: flex; /* Activa Flexbox */
+    height: 200px; /* Definimos altura para notar la alineación vertical */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: flex-end; /* Alinea al final del eje cruzado (abajo) */
+    border: 2px solid #333;
+    background-color: #e9ecef;
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    background-color: #28a745;
+    margin: 5px;
+}
