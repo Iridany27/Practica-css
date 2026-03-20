@@ -146,3 +146,37 @@ h1 {
     cursor: pointer;
     z-index: 2000;
 }
+
+/* --- Estilos Base (Mobile-First) --- */
+body {
+    font-size: 16px;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Todo en una columna para móvil */
+}
+
+.container {
+    width: 100%;
+}
+
+/* --- Tablets (600px a 1024px) --- */
+@media (min-width: 600px) {
+    body {
+        font-size: 18px;
+        background-color: #f4f4f4;
+    }
+}
+
+/* --- Escritorio (Más de 1024px) --- */
+@media (min-width: 1024px) {
+    body {
+        flex-direction: row; /* Layout en paralelo para pantallas grandes */
+        font-size: 20px;
+    }
+    
+    .sidebar {
+        width: 25%;
+        display: block; /* Mostrar si estaba oculto en móvil */
+    }
+}
