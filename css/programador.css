@@ -1,0 +1,23 @@
+#programador-section {
+    width: 400px;
+    padding: 25px;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    animation: slideIn 0.8s ease-out;
+    margin: 20px auto;
+}
+
+#programador-section h2 {
+    text-align: center;
+    color: #880e4f;
+    margin-bottom: 15px;
+}
+
+#programador-section p {
+    font-size: 1.1em;
+    line-height: 1.5em;
+    color: #4a148c;
+}

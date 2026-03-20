@@ -1,0 +1,30 @@
+nav#navbar {
+    width: 100%;
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+
+nav#navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav#navbar ul li button {
+    padding: 10px 20px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #f8bbd9, #f48fb1);
+    color: white;
+    font-weight: 600;
+}
+
+nav#navbar ul li button:hover {
+    background: linear-gradient(135deg, #fac5e1, #f6a5c0);
+}

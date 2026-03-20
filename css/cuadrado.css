@@ -1,0 +1,39 @@
+#cuadrado-section {
+    width: 300px;
+    padding: 25px;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.2);
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1),
+                inset 0 1px 0 rgba(255,255,255,0.3);
+    animation: slideIn 0.8s ease-out;
+    margin: 20px auto;
+}
+
+#cuadrado-section input {
+    width: 80%;
+    padding: 12px;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.3);
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    backdrop-filter: blur(10px);
+}
+
+#cuadrado-section button {
+    padding: 15px 20px;
+    font-size: 1.2em;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #f8bbd9, #f48fb1);
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+#cuadrado-section button:hover {
+    background: linear-gradient(135deg, #fac5e1, #f6a5c0);
+    box-shadow: 0 15px 35px rgba(244,143,177,0.4);
+}

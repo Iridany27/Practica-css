@@ -3,64 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Proyecto CSS</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Herramientas Web Interactivas</title>
+
+    <!-- Estilo global -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Estilo del navbar -->
+    <link rel="stylesheet" href="css/navbar.css">
+    <!-- Estilos de secciones -->
+    <link rel="stylesheet" href="css/cuadrado.css">
+    <link rel="stylesheet" href="css/calculadora.css">
+    <link rel="stylesheet" href="css/nomina.css">
+    <link rel="stylesheet" href="css/programador.css">
 </head>
 <body>
 
-    <main style="text-align: center; max-width: 600px; padding: 20px;">
-        <h1>Diseño Elegante</h1>
-        <p class="intro">
-            Este es un ejemplo de cómo aplicar estilos modernos utilizando tipografías personalizadas, gradientes y un diseño centrado profesional.
-        </p>
-        <button id="btn-principal">Saber más</button>
-    </main>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <ul>
+            <li><button onclick="mostrarSeccion('cuadrado-section')">Cuadrado</button></li>
+            <li><button onclick="mostrarSeccion('calculadora-section')">Calculadora</button></li>
+            <li><button onclick="mostrarSeccion('nomina-section')">Nómina</button></li>
+            <li><button onclick="mostrarSeccion('programador-section')">Sobre el Programador</button></li>
+            <li><button onclick="cerrarSesion()">Cerrar Sesión</button></li>
+        </ul>
+    </nav>
 
+    <!-- Sección Cuadrado -->
+    <div id="cuadrado-section" class="seccion">
+        <input type="text" id="numero" placeholder="Ingrese un número">
+        <input type="text" id="resultado" placeholder="Resultado" readonly>
+        <button type="button" onclick="Cuadrado()">Imprimir Cuadrado</button>
+    </div>
+
+    <!-- Sección Calculadora -->
+    <div id="calculadora-section" class="seccion calculator">
+        <div class="screen" id="screen">0</div>
+        <div class="keys">
+            <button onclick="appendNumber('1')">1</button>
+            <button onclick="appendNumber('2')">2</button>
+            <button onclick="appendNumber('3')">3</button>
+            <button onclick="appendNumber('4')">4</button>
+            <button onclick="appendNumber('5')">5</button>
+            <button onclick="appendNumber('6')">6</button>
+            <button onclick="appendNumber('7')">7</button>
+            <button onclick="appendNumber('8')">8</button>
+            <button onclick="appendNumber('9')">9</button>
+            <button onclick="appendNumber('0')">0</button>
+            <button onclick="clearScreen()" class="op">C</button>
+            <button onclick="backspace()" class="op">⌫</button>
+            <button onclick="appendOp('+')" class="op">+</button>
+            <button onclick="appendOp('-')" class="op">−</button>
+            <button onclick="appendOp('*')" class="op">×</button>
+            <button onclick="appendOp('/')" class="op">÷</button>
+            <button onclick="calculate()" class="equal">=</button>
+        </div>
+    </div>
+
+    <!-- Sección Nómina -->
+    <div id="nomina-section" class="seccion">
+        <h2>Registro de Nómina</h2>
+        <label>ID Empleado:</label>
+        <input type="text" id="idEmpleado">
+        <label>Nombre:</label>
+        <input type="text" id="nombre">
+        <label>Horas trabajadas (semana):</label>
+        <input type="number" id="horas">
+        <label>Costo por hora:</label>
+        <input type="number" id="costo">
+        <label>Horas Normales:</label>
+        <input type="number" id="horasNormales">
+        <label>Horas Extras:</label>
+        <input type="number" id="horasExtras">
+        <label>Subtotal:</label>
+        <input type="text" id="subtotal" readonly>
+        <label>ISPT (10%):</label>
+        <input type="text" id="ispt" readonly>
+        <label>Monto a Pagar:</label>
+        <input type="text" id="monto" readonly>
+        <div class="buttons">
+          <button class="btn btn-calc" onclick="calcular()">Calcular</button>
+          <button class="btn btn-clear" onclick="limpiar()">Limpiar</button>
+        </div>
+    </div>
+
+    <!-- Sección Sobre el Programador -->
+    <div id="programador-section" class="seccion">
+        <h2>Sobre el Programador</h2>
+        <p>Soy Alondra Iridany, estudiante de Desarrollo de Software Multiplataforma. Nací el dia 15 de enero del 2007 en Monterrey, Nuevo León. Mis mejores Amigas son Loretta, Jacky y Maggy.
+             Este es un programa interactivo (Navbar) con secciones de cálculo, nómina y más.</p>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/navbar.js"></script>
+    <script src="js/cuadrado.js"></script>
+    <script src="js/calculadora.js"></script>
+    <script src="js/nomina.js"></script>
+    <script src="js/programador.js"></script>
 </body>
 </html>
-
-<section class="padre">
-    <h2>Ejemplo de Herencia</h2>
-    <p>Este párrafo es hijo de la sección .padre y hereda su color.</p>
-    <ul>
-        <li>Este elemento de lista también hereda el color del padre.</li>
-    </ul>
-</section>
-
-<section class="flex-section">
-    <h2>Práctica de Flexbox</h2>
-    <div class="flex-container">
-        <div class="item">Elemento 1</div>
-        <div class="item">Elemento 2</div>
-        <div class="item">Elemento 3</div>
-    </div>
-</section>
-
-<section class="alignment-section">
-    <h2>Práctica de Alineación Flexbox</h2>
-    <div class="align-container">
-        <div class="box">A</div>
-        <div class="box">B</div>
-        <div class="box">C</div>
-    </div>
-</section>
-
-<!-- Encabezado que se queda pegado al hacer scroll -->
-<header class="sticky-header">
-    <h3>Navegación Sticky</h3>
-</header>
-
-<section class="position-section">
-    <h2>Práctica de Posicionamiento (Position)</h2>
-    
-    <!-- Contenedor relativo para alojar un elemento absoluto -->
-    <div class="relative-parent">
-        <p>Soy el contenedor padre (Relative)</p>
-        <div class="absolute-child">Punto Fijo</div>
-    </div>
-
-    <!-- Botón flotante que siempre verás en pantalla -->
-    <div class="fixed-button">
-        💬 Ayuda
-    </div>
-</section>
